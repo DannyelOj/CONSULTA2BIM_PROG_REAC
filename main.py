@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy import signal
 from celluloid import Camera
 
-plt.style.use('seaborn')
+#plt.style.use('seaborn')
 
 def serieFourier(x,n):
     m = 2*n-1
@@ -26,7 +26,8 @@ while n<nTotal:
     plt.plot(x,f,c='tab:orange')
     camera.snap()
     n += 1
-
-plt.plot(x,signal.square(x),color='k')
-animation = camera.animate()
-animation.save('fourier.gif')
+plt.plot(x,f)
+#plt.plot(x,signal.square(x),color='k')
+#animation = camera.animate()
+#animation.save('fourier.gif')
+plt.show()
